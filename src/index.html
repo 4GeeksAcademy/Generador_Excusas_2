@@ -11,19 +11,33 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <script>
+      //Fragmentos de las excusas//
+      let array1 = ["El perro", "El Hamster", "El pez", "La araña"]; //Quien lo provoco//
+      let array2 = ["se comio", "escondio", "me robo", "destruyo"]; //La acción//
+      let array3 = ["mi tarea", "mi telefono", "mi regalo", "la puerta"]; //El objetivo//
+      let array4 = [
+        "cuando no miraba",
+        "cuando sali a comprar",
+        "mientras dormia",
+        "mientras estaba en clases"
+      ]; //En que momento//
+
+      //Preparación de los Array para que escoja una opcion aleatoria//
+      const quien = array1[Math.floor(Math.random() * array1.length)];
+      const accion = array2[Math.floor(Math.random() * array2.length)];
+      const que = array3[Math.floor(Math.random() * array3.length)];
+      const cuando = array4[Math.floor(Math.random() * array4.length)];
+
+      const excusa = [quien, accion, que, cuando].join(" "); //compilación de la excusa escogiendo un opcion aleatoria de cada Array//
+      document.write(excusa);
+    </script>
+    <!--He tenido especial dificultad al escribir el codigo de este proyecto, a veces se reubicaba solo
+    y he intentado agregarle CSS pero no consigo que conecte y tambien se recoloca lo que escribo y tenia
+    que estar ordenandolo cada poco. Tambien añado que a ratos no recargaba los cambios en la pagina web y me saltaba por cada cambio
+    una pestaña que me daba la opción de "sobre escribir" y ya admitia cambios aunque no me funciono con CSS-->
   </body>
 </html>
